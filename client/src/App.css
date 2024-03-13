@@ -1,0 +1,9 @@
+body {
+    color:white;
+    background: linear-gradient(to right, #181f2e, #0D1322);
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    color:white;
+}

@@ -1,0 +1,50 @@
+.main-container {
+    margin: 2em 2em; 
+}
+
+/* Settings page */
+.settings-container {
+    max-width: 50%; 
+    margin: 0 1em;
+    padding: 2em;
+  }
+  
+  .setting-item {
+    margin-bottom: 0.5em;
+    border-radius: 20px;
+    padding: 1em;
+    display:flex;
+    align-items: center;
+    background-color: #333846;
+  }
+  
+  .setting-item label {
+    margin-right: 0.5em;
+    width: 30%;
+  }
+  
+  .setting-item input[type="number"] {
+    width: 30px;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: none; 
+    background: none;
+    color:white;
+  }
+  
+  .radio-group {
+    display: flex;
+    width: 70%;
+    gap: 1em;
+  }
+  
+  .radio-group label {
+    padding: 0.5em 1em;
+    border-radius: 20px; /* Rounded edges for radio buttons */
+    cursor: pointer;
+  }
+  
+  .radio-group input[type="radio"] {
+    margin-right: 0.5em;
+  }
+ 

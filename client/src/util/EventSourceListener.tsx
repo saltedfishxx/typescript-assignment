@@ -1,4 +1,7 @@
-// EventSourceListener.tsx
+/**
+ * This file is used to init an EventSource API to create a connection with 
+ * the server to receive real-time messages.
+ */
 import React, { useContext, useEffect } from 'react';
 import { ToastManagerContext } from '../contexts/ToastManagerContext';
 import { createEventSource } from './sseService';

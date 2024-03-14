@@ -2,6 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './MenuBar.css'
 
+/**
+  * This file is a component representing the Menu Bar in the application.
+  */
 const MenuBar: React.FC = () => {
   return (
     <div className="menu-bar">

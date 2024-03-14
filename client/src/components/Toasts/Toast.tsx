@@ -3,16 +3,22 @@ import { Notification } from '../../types';
 import { useSettings } from '../../contexts/SettingsContext';
 import './Toast.css';
 
+/**
+  * This file is a component represeting a Toast. It receives two props: notification 
+  * (containing the message to display) and onClose (a callback function to close the toast).
+  * Also timeout automatically unless hovered on which resets the timeout.
+  */
+
 interface ToastProps {
   notification: Notification;
   onClose: () => void;
 }
 
 export const Toast = forwardRef<HTMLDivElement, ToastProps>(({ notification, onClose }, ref) => {
-  const { disappearTime } = useSettings(); // Assuming useSettings provides disappearTime
-  const onCloseRef = useRef(onClose); // Ref to keep a stable reference to onClose
-  onCloseRef.current = onClose; // Update the current property to the latest onClose each render
-  const [isHovered, setIsHovered] = useState(false); // State to track hover
+  const { disappearTime } = useSettings(); 
+  const onCloseRef = useRef(onClose); 
+  onCloseRef.current = onClose; 
+  const [isHovered, setIsHovered] = useState(false); 
 
   useEffect(() => {
     // Function to handle the close action

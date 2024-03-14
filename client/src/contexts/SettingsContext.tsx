@@ -1,5 +1,13 @@
 import React, { createContext, useState, useContext } from 'react';
 
+/**
+ * This file is used to manage settings retrieved from the Setings page.
+ * Context: Provides several functions and state variables related to toast notifications
+ * (e.g, notification count, toast position, timeout time)
+ *
+ * Provider: Used to wrap the children components into it to allow the usage of context.
+ */
+
 interface SettingsContextType {
   disappearTime: string;
   setDisappearTime: (time: string) => void;

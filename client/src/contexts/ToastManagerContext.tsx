@@ -4,6 +4,14 @@ import { Notification } from '../types';
 import './../components/Toasts/Toast.css'
 import { SettingsContext } from './SettingsContext';
 
+/**
+ * This file is a context and provider setup for a list of Toast notifications.
+ * Context: Allows Toast notifications to be added/removed from the UI, Toast positions and count
+ * is retrieved from SettingsContext.
+ *
+ * Provider: Used to map over the notifications array and render individual Toast components.
+ */
+
 interface IToastManagerContext {
   addNotification: (notification: Notification) => void;
   removeNotification: (msg_id: string) => void;

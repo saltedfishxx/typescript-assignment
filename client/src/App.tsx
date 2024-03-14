@@ -1,18 +1,22 @@
 import React, { useEffect, useContext } from 'react';
 import { createEventSource } from './util/sseService';
 import { ToastManagerProvider, ToastManagerContext } from './contexts/ToastManagerContext';
-import { Notification } from './types';
 import { HashRouter  as Router, Route, Routes } from 'react-router-dom';
+
+import EventSourceListener from './util/EventSourceListener';
+import { SettingsProvider } from './contexts/SettingsContext';
+import { Notification } from './types';
+
 import MenuBar from './components/MenuBar';
 import Main from './pages/Main';
 import Settings from './pages/Settings';
 import './App.css';
-import EventSourceListener from './util/EventSourceListener';
-import { SettingsProvider } from './contexts/SettingsContext';
+
 
 const App: React.FC = () => {
   const { addNotification } = useContext(ToastManagerContext);
 
+  // init the event source to start receiving toasts from the server 
   useEffect(() => {
     const handleNewMessage = (notification: Notification) => {
       addNotification(notification);
